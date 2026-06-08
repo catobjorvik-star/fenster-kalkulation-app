@@ -2,6 +2,19 @@
 
 Render-ready desktop web app for the Merz window calculation workflow. It recreates the Excel-style calculation logic in a browser app with a square, desktop-first UI, integrated Merz branding and a non-clipping header layout.
 
+## Full ZIP version included
+
+The full generated project ZIP is included in this repository under `bundle/` as ordered `.b64` part files. This is because the connected GitHub tool can write text files reliably, but not upload a binary ZIP directly.
+
+On startup, `server.js` automatically:
+
+1. reads all `bundle/fenster-kalkulation-app.zip.part*.b64` files,
+2. joins and decodes them back into `fenster-kalkulation-app.zip`,
+3. extracts the ZIP into `.runtime/`,
+4. serves `.runtime/fenster-kalkulation-app/public`.
+
+So Render runs the full ZIP app automatically with `npm start`.
+
 ## Features
 
 - Desktop-first calculation workspace
