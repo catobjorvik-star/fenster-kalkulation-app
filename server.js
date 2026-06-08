@@ -6,7 +6,7 @@ import { execFileSync } from 'node:child_process';
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 const fallbackPublicDir = path.join(rootDir, 'public');
-const bundleDir = path.join(rootDir, 'bundle');
+const bundleDir = path.join(rootDir, 'bundle-disabled');
 const runtimeDir = path.join(rootDir, '.runtime');
 const runtimeZip = path.join(runtimeDir, 'fenster-kalkulation-app.zip');
 const runtimePublicDir = path.join(runtimeDir, 'fenster-kalkulation-app', 'public');
